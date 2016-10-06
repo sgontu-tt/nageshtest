@@ -1,0 +1,119 @@
+---
+layout: home
+title: Instant Site
+parent: home
+excerpt:
+---
+
+{% include banner_carousel.html %}
+
+<!--About us Part-->
+
+<section id="About"  class="About clearfix">
+
+  <div class="container">
+    <div class="row">
+       {% region about_us_heading %}
+
+       {% region about_us %}
+      <div class="col-sm-12 text-center social-icons">
+        <h5>Follow Us</h5>
+        <ul>
+          <li><a class="fa fa-facebook" aria-hidden="true"></a></li>
+
+          <li><a class="fa fa-twitter" aria-hidden="true"></a></li>
+
+          <li><a class="fa fa-google-plus" aria-hidden="true"></a></li>
+
+          <li><a class="fa fa-instagram" aria-hidden="true"></a></li>
+
+          <li><a class="fa fa-pinterest-p" aria-hidden="true"></a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <article  class="about-pics ">
+
+    <div class="col-sm-4">
+      <div class="row">
+
+        <div class="col-sm-12">
+          <div class="row">
+            {% region about_1_img %}
+
+          </div>
+        </div>
+
+        <div class="col-sm-12">
+          <div class="row">
+            {% region about_2_img %}
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-8 ">
+      <div class="row">
+        {% region about_3_img %}
+      </div>
+    </div>
+
+  </article>
+</section>
+
+
+<!--Rooms us Part-->
+{% include rooms.html %}
+
+<!--Facilities us Part-->
+<section id="Facilities" class="Facilities clearfix">
+
+  <div class="container">
+    <div class="row">
+    {% region facilities_heading %}
+    {% for item in site.data._models.facilities | sort: "order" %}
+      <div class="col-sm-6 ">
+       <div class= {{ item.name }} >
+          <h4> {{ item.name }} </h4>
+          <p> {{ item.content }} </p>
+       </div>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+
+  <article class="facility-pics clearfix">
+    <div class="col-sm-6">
+      <div class="row">
+        {% region facilities_img1 %}
+        <div class="facility-pics-info">
+          Quae quidem sapien<br>
+          sequuntur duce
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="row">
+        {% region facilities_img3 %}
+
+        <div class="facility-pics-info">
+          Quae quidem sapien<br>
+          sequuntur duce
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!--Amenities us Part-->
+{% include amenities.html %}
+
+<!--Location us Part-->
+{% include location.html %}
+
+<!--Gallery us Part-->
+{% include gallery.html %}

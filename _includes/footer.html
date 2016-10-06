@@ -1,0 +1,39 @@
+<!--Footer Part-->
+<footer id="Contact">
+
+  <div class="container">
+  <div class="row">
+  <div class="inner-content">
+  <div class="col-sm-3">
+  <div class="footer-logo">
+
+    {% region hotel_logo_text %}
+    <!--span class="logo-tag">{% region logo_text %} </span-->
+
+  </div>
+  </div>
+
+  <div class="col-sm-3 f-social-links">
+    <h3>Follow Us</h3>
+    {% for social_icons in site.data._models.social_icons %}
+      <a class= "{{ social_icons.icon_name }}" aria-hidden="true" href = "{{ social_icons.icon_href }}"></a> 
+    {% endfor %}
+  </div>
+
+  <div class="col-sm-3">
+  <h3>{% region contact_heading %}</h3>
+  {% region contact_info %}
+  </div>
+
+  <div class="col-sm-3">
+  <h3>{% region address_heading %}</h3>
+    {% region fullAddress %}
+  </div>
+  <div class="clearfix"></div>
+  </div>
+  </div>
+  </div>
+</footer>
+<section class="copyrights">
+{% region copyrights_info %}
+</section>
